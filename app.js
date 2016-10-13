@@ -7,9 +7,9 @@ var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/news', function(err,db){
+mongoose.connect(process.env.RADDIT_DB, function(err,db){
     if (!err){
-        console.log('Connected to /news!');
+        console.log('Connected to database!');
     } else{
         console.dir(err); //failed to connect
     }
