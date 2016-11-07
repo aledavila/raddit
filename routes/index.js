@@ -7,7 +7,7 @@ var jwt = require('express-jwt');
 var User = mongoose.model('User');
 var Post = mongoose.model('Post');
 var Comment = mongoose.model('Comment');
-var auth = jwt({secret: process.env.RADDIT_SECRET, userProperty: 'payload'});
+var auth = jwt({secret: 'SECRET', userProperty: 'payload'});
 
 /* GET home page. */
 router.get('/', function(req, res) {
